@@ -3,7 +3,7 @@ Relyze Plugins
 
 Release
 -------
-These plugins are shipped with [Relyze](www.relyze.com).
+These plugins are shipped with [Relyze](https://www.relyze.com).
 
  * [release/call_highlight.rb](release/call_highlight.rb) - Highlight every call instruction in the current function.
  
@@ -19,13 +19,13 @@ These plugins are shipped with [Relyze](www.relyze.com).
  
  * [release/virustotal_detection.rb](release/virustotal_detection.rb) - Retrieve the last known detection rate from VirusTotal.
  
- * [release/decoders/base64.rb](release/decoders/base64.rb) - 
+ * [release/decoders/base64.rb](release/decoders/base64.rb) - Base64 Decoder a buffer.
  
- * [release/decoders/bitwise_not.rb](release/decoders/bitwise_not.rb) - 
+ * [release/decoders/bitwise_not.rb](release/decoders/bitwise_not.rb) - Bitwise Not a buffers bytes.
  
- * [release/decoders/xor.rb](release/decoders/xor.rb) - 
+ * [release/decoders/xor.rb](release/decoders/xor.rb) - Xor a buffers bytes.
  
- * [release/decoders/zlib_decompress.rb](release/decoders/zlib_decompress.rb) - 
+ * [release/decoders/zlib_decompress.rb](release/decoders/zlib_decompress.rb) - Decompress a buffer via Zlib inflate
 
 Examples
 --------
