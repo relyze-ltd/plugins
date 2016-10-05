@@ -49,6 +49,8 @@ These plugins are simple examples to demonstrate various capabilities.
  
  * [examples/test_entrypoints.rb](examples/test_entrypoints.rb) - Test the various entrypoints of an Analysis plugin, including manually running the plugin, invoking the plugin via a keyboard or popup menu shortcut or via the analysis pipeline.
  
+ * [examples/patch_nonexec_section.rb](examples/patch_nonexec_section.rb) - Patch the Characteristics of a PE section which contains the entry point if that section is not already marked as executable.
+ 
 Support:
 --------
 
