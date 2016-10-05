@@ -33,16 +33,18 @@ These plugins are simple examples to demonstrate various capabilities.
 
  * [examples/binary_diff_compare.rb](examples/binary_diff_compare.rb) - Analyze two binaries and perform a differential analysis against them. Displays the percentage difference of the two binaries and what function were modified, by how much and their corresponding matched function.
 
- * [examples/count_unique_instructions.rb]() - Iterate over every instruction in every code block and count the number of unique instructions based on their mnemonic.
+ * [examples/count_unique_instructions.rb](examples/count_unique_instructions.rb) - Iterate over every instruction in every code block and count the number of unique instructions based on their mnemonic.
 
- * [examples/disassemble_arbitrary_bytes.rb]() - Example to disassemble an arbitrary byte stream for the various supported architectures.
+ * [examples/disassemble_arbitrary_bytes.rb](examples/disassemble_arbitrary_bytes.rb) - Example to disassemble an arbitrary byte stream for the various supported architectures.
 
- * [examples/locate_elf_section_header_items.rb]() - Example to traverse a models structure in order to search for some data.
+ * [examples/locate_elf_section_header_items.rb](examples/locate_elf_section_header_items.rb) - Example to traverse a models structure in order to search for some data.
 
- * [examples/module_dependency_graph.rb]() - Example to analyse multiple binaries and generate a dependency graph based each binaries module imports. The graph is either displayed in the GUI or saved as an SVG file.
+ * [examples/module_dependency_graph.rb](examples/module_dependency_graph.rb) - Example to analyse multiple binaries and generate a dependency graph based each binaries module imports. The graph is either displayed in the GUI or saved as an SVG file.
 
- * [examples/multithreaded_folder_analysis.rb]() - Example to perform analysis on multiple binaries in parallel and then save them to the Relyze library.
+ * [examples/multithreaded_folder_analysis.rb](examples/multithreaded_folder_analysis.rb) - Example to perform analysis on multiple binaries in parallel and then save them to the Relyze library.
 
+ * [examples/add_model_info.rb](examples/add_model_info.rb) - Add some example information to a model which is displayed in the overview.
+ 
 License
 -------
 All plugins are made available under a 3 clause BSD license. Please see [LICENSE.txt](LICENSE.txt) for more information.
