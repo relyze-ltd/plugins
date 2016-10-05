@@ -47,6 +47,8 @@ These plugins are simple examples to demonstrate various capabilities.
  
  * [examples/colors.rb](examples/colors.rb) - Simple example to show how to set the color of a models structure items, functions, blocks or instructions.
  
+ * [examples/test_entrypoints.rb](examples/test_entrypoints.rb) - Test the various entrypoints of an Analysis plugin, including manually running the plugin, invoking the plugin via a keyboard or popup menu shortcut or via the analysis pipeline.
+ 
 Support:
 --------
 
