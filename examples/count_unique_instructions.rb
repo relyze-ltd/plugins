@@ -20,25 +20,25 @@ class Plugin < Relyze::Plugin::Analysis
         total     = 0
         mnemonics = Hash.new
         # Grab the models read lock while we iterate over every block and instruction.
-		cm.synchronize_read do
+        cm.synchronize_read do
             # Iterate over every block in the model
-			cm.blocks do | block |
+            cm.blocks do | block |
                 # Skip blocks that are node code
-				next if not block.code?
+                next if not block.code?
                 # Iterate over every instruction in this code block
-				block.instructions do | inst |
+                block.instructions do | inst |
                     # pull out the instruction raw decoded data and grab the mnemonic
-					m = inst.to_raw.mnemonic
+                    m = inst.to_raw.mnemonic
                     # Update the mnemonics hash for this mnemonic
-					if( mnemonics.has_key?( m ) )
-						mnemonics[m] += 1
-					else
-						mnemonics[m] = 1
-					end
-					total += 1
-				end
-			end
-		end
+                    if( mnemonics.has_key?( m ) )
+                        mnemonics[m] += 1
+                    else
+                        mnemonics[m] = 1
+                    end
+                    total += 1
+                end
+            end
+        end
         return total, ::Hash[ mnemonics.sort_by{ | k, v | v }.reverse ]
     end
 
