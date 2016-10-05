@@ -45,6 +45,8 @@ These plugins are simple examples to demonstrate various capabilities.
 
  * [examples/add_model_info.rb](examples/add_model_info.rb) - Add some example information to a model which is displayed in the overview.
  
+ * [examples/colors.rb](examples/colors.rb) - Simple example to show how to set the color of a models structure items, functions, blocks or instructions.
+ 
 Support:
 --------
 
