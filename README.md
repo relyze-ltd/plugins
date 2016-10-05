@@ -51,7 +51,9 @@ These plugins are simple examples to demonstrate various capabilities.
  
  * [examples/patch_nonexec_section.rb](examples/patch_nonexec_section.rb) - Patch the Characteristics of a PE section which contains the entry point if that section is not already marked as executable.
   
- * [examples/unmangle_type.rb](examples/unmangle_type.rb) - Unmange a (Microsoft, LLVM or Borland) mangled name and generate a corresponding data type for it and for example generate a poionter to this type.
+ * [examples/unmangle_type.rb](examples/unmangle_type.rb) - Unmangle a (Microsoft, LLVM or Borland) mangled name and generate a corresponding data type for it and for example generate a poionter to this type.
+
+ * [examples/metasm_integration.rb](examples/metasm_integration.rb) - Test loading and using the Metasm library.
  
 Support:
 --------
