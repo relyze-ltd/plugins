@@ -45,4 +45,4 @@ These plugins are simple examples to demonstrate various capabilities.
 
 License
 -------
-All plugins are made available under a 3 clause BSD license. Please see LICENSE.txt for more information.
+All plugins are made available under a 3 clause BSD license. Please see [LICENSE.txt](LICENSE.txt) for more information.
