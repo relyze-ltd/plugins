@@ -52,7 +52,7 @@ Visit our [Relyze Plugin SDK](https://www.relyze.com/docs/SDK/index.html) docume
 
 Visit our [Help Centre](http://support.relyze.com/help_center) to find answers to common questions.
 
-If you require further assistance, (contact)[https://www.relyze.com/contact.html] us directly.
+If you require further assistance, [contact us](https://www.relyze.com/contact.html) directly.
 
 License
 -------
