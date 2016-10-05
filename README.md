@@ -45,6 +45,15 @@ These plugins are simple examples to demonstrate various capabilities.
 
  * [examples/add_model_info.rb](examples/add_model_info.rb) - Add some example information to a model which is displayed in the overview.
  
+Support:
+--------
+
+Visit our [Relyze Plugin SDK](https://www.relyze.com/docs/SDK/index.html) documentation for a complete description of the plugin framework.
+
+Visit our [Help Centre](http://support.relyze.com/help_center) to find answers to common questions.
+
+If you require further assistance, (contact)[https://www.relyze.com/contact.html] us directly.
+
 License
 -------
 All plugins are made available under a 3 clause BSD license. Please see [LICENSE.txt](LICENSE.txt) for more information.
