@@ -66,7 +66,8 @@ class Plugin < Relyze::Plugin::Analysis
             { 
                 :node_shape            => :ellipse,
                 :font_justify          => :center,
-                :node_background_color => options['/node_lib_color']
+                :node_background_color => options['/node_lib_color'],
+                :node_spacing          => 200
             }
         )
         
