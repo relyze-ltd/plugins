@@ -5,6 +5,8 @@ Release
 -------
 These plugins are shipped with [Relyze](https://www.relyze.com).
 
+ * [release/x64dbg.rb](release/x64dbg.rb) - Import or export [x64dbg](http://x64dbg.com) databases, including bookmarks, comments and labels.
+ 
  * [release/call_highlight.rb](release/call_highlight.rb) - Highlight every call instruction in the current function.
  
  * [release/diff_copy_data.rb](release/diff_copy_data.rb) - After a differential analysis has been performed, copy block names and comments from all matched functions in the current analysis over to the diffed analysis.
