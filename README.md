@@ -1,9 +1,9 @@
-Relyze Plugins
-==============
+Relyze Desktop Plugins
+======================
 
 Release
 -------
-These plugins are shipped with [Relyze](https://www.relyze.com).
+These plugins are shipped with [Relyze Desktop](https://www.relyze.com/overview.html).
 
  * [release/x64dbg.rb](release/x64dbg.rb) - Import or export [x64dbg](http://x64dbg.com) databases, including bookmarks, comments and labels.
  
@@ -29,6 +29,10 @@ These plugins are shipped with [Relyze](https://www.relyze.com).
  
  * [release/decoders/zlib_decompress.rb](release/decoders/zlib_decompress.rb) - Decompress a buffer via Zlib inflate
 
+ * [release/loaders/mclf.rb](release/loaders/mclf.rb) - Load MobiCore Load Format (MCLF) v2 binaries.
+
+ * [release/loaders/srec.rb](release/loaders/srec.rb) - Load Motorola S-Record (SREC) binaries.
+
 Examples
 --------
 These plugins are simple examples to demonstrate various capabilities.
@@ -41,7 +45,7 @@ These plugins are simple examples to demonstrate various capabilities.
 
  * [examples/locate_elf_section_header_items.rb](examples/locate_elf_section_header_items.rb) - Example to traverse a models structure in order to search for some data.
 
- * [examples/module_dependency_graph.rb](examples/module_dependency_graph.rb) - Example to analyse multiple binaries and generate a dependency graph based each binaries module imports. The graph is either displayed in the GUI or saved as an SVG file.
+ * [examples/module_dependency_graph.rb](examples/module_dependency_graph.rb) - Example to analyze multiple binaries and generate a dependency graph based each binaries module imports. The graph is either displayed in the GUI or saved as an SVG file.
 
  * [examples/multithreaded_folder_analysis.rb](examples/multithreaded_folder_analysis.rb) - Example to perform analysis on multiple binaries in parallel and then save them to the Relyze library.
 
@@ -49,11 +53,11 @@ These plugins are simple examples to demonstrate various capabilities.
  
  * [examples/colors.rb](examples/colors.rb) - Simple example to show how to set the color of a models structure items, functions, blocks or instructions.
  
- * [examples/test_entrypoints.rb](examples/test_entrypoints.rb) - Test the various entrypoints of an Analysis plugin, including manually running the plugin, invoking the plugin via a keyboard or popup menu shortcut or via the analysis pipeline.
+ * [examples/test_entrypoints.rb](examples/test_entrypoints.rb) - Test the various entry points of an Analysis plugin, including manually running the plugin, invoking the plugin via a keyboard or popup menu shortcut or via the analysis pipeline.
  
  * [examples/patch_nonexec_section.rb](examples/patch_nonexec_section.rb) - Patch the Characteristics of a PE section which contains the entry point if that section is not already marked as executable.
   
- * [examples/unmangle_type.rb](examples/unmangle_type.rb) - Unmangle a (Microsoft, LLVM or Borland) mangled name and generate a corresponding data type for it and for example generate a poionter to this type.
+ * [examples/unmangle_type.rb](examples/unmangle_type.rb) - Unmangle a (Microsoft, LLVM or Borland) mangled name and generate a corresponding data type for it and for example generate a pointer to this type.
 
  * [examples/metasm_integration.rb](examples/metasm_integration.rb) - Test loading and using the Metasm library.
  
