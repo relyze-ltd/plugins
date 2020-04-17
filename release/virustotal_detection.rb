@@ -8,7 +8,7 @@ class Plugin < Relyze::Plugin::Analysis
             :name        => 'VirusTotal Detection Rate',
             :description => %q{
                 Retrieve the last known detection rate from VirusTotal. You can supply you API key 
-                via the /virustotal_apikey=KEY command line switch, which can be saved for later 
+                via the /virustotal_apikey=KEY command line switch, which can be saved for later
                 use by this plugin if you set /virustotal_apikey_save=true
             },
             :authors     => [ 'Relyze Software Limited' ],
@@ -21,7 +21,7 @@ class Plugin < Relyze::Plugin::Analysis
                 :virustotal_report => 'Alt+V' 
             },
             :require     => {
-                :files => [ 'date', 'digest/sha1', 'rubygems', 'json', 'rest-client' ]
+                :files => [ 'date', 'digest/sha1', 'rubygems', 'json', 'net/http' ]
             },
             :options     => {
                 '/virustotal_apikey'      => nil,
@@ -30,22 +30,34 @@ class Plugin < Relyze::Plugin::Analysis
         } )
     end
 
-    def get_virustotal_report( apikey )
-    
-        if( apikey.nil? or current_model.nil? )
-            return false 
+    def json_request( url, params={} )
+        uri = URI( url )
+        req = Net::HTTP::Post.new( uri.path, 'Content-Type' => 'application/json' )
+        req.set_form_data( params )
+        res = Net::HTTP.start( uri.host, uri.port, :use_ssl => uri.scheme == 'https' ) do | http |
+            http.request( req )
         end
-        
+        return res.body
+    end
+
+    def get_virustotal_report( apikey )
+
+        if( apikey.nil? or current_model.nil? )
+            return false
+        end
+
         analysis_sha1 = ::Digest::SHA1.hexdigest( current_model.buffer ) 
 
         if( analysis_sha1.nil? )
             raise 'Unable to retrive the Analysis SHA1'
         end
 
-        result = ::RestClient.post( 
+        result = json_request(
             'https://www.virustotal.com/vtapi/v2/file/report',
-            'apikey'   => apikey,
-            'resource' => analysis_sha1 
+            {
+                'apikey'   => apikey,
+                'resource' => analysis_sha1
+            }
         )
 
         report = ::JSON.parse( result )
