@@ -14,7 +14,7 @@ class Plugin < Relyze::Plugin::Analysis
                 :call_highlight_clear => 'Shift+Alt+H'
             },
             :require                  => {
-                :arch                 => [ :x86, :x64 ]
+                :arch                 => [ :x86, :x64, :arm ]
             }
         } )
     end
@@ -41,7 +41,7 @@ class Plugin < Relyze::Plugin::Analysis
                     block.instructions do | inst | 
                         # test if this instruction is a call and if so
                         # either set of clear the color.
-                        if( inst.to_raw.mnemonic == :call ) 
+                        if( inst.branch? and inst.branch_type == :call ) 
                             inst.color = color 
                             success    = true
                         end
