@@ -16,24 +16,24 @@ class Plugin < Relyze::Plugin::Analysis
                 :query_any_package       => nil,
                 :color_library_functions => nil
             },
-            :min_application_version => '1.5.0'
+            :min_application_version => '3.0.2'
         } )
     end
 
     def apply_package
-        self._apply_package( @relyze.static_library_packages.select { |p| p.type != :shared and p.applicable?( cm ) }, true )
+        self._apply_package( @relyze.static_library_packages.select { |p| p.type != :shared and p.applicable?( cm ) } )
     end
 
     def apply_any_package
-        self._apply_package( @relyze.static_library_packages, false )
+        self._apply_package( @relyze.static_library_packages )
     end
     
     def query_package
-        self._query_package( @relyze.static_library_packages.select { |p| p.type != :shared and p.applicable?( cm ) }, true )
+        self._query_package( @relyze.static_library_packages.select { |p| p.type != :shared and p.applicable?( cm ) } )
     end
 
     def query_any_package
-        self._query_package( @relyze.static_library_packages, false )
+        self._query_package( @relyze.static_library_packages )
     end
     
     def color_library_functions
@@ -61,10 +61,10 @@ class Plugin < Relyze::Plugin::Analysis
     
     protected
     
-    def _apply_package( packages, strict )
+    def _apply_package( packages )
         package = @relyze.list_dialog( self.name, "Apply Package:", packages.sort! { |x, y| x.name <=> y.name } )
         if( not package.nil? )
-            count = package.apply( cm, nil, strict )
+            count = package.apply( cm, nil )
             @relyze.message_dialog( self.name, "Applied %d signatures from package '%s'." % [ count, package.name ], [ :Ok ] )
             if( count > 0 and @relyze.gui? )
                 @relyze.update_gui 
@@ -72,10 +72,10 @@ class Plugin < Relyze::Plugin::Analysis
         end
     end
     
-    def _query_package( packages, strict )
+    def _query_package( packages )
         package = @relyze.list_dialog( self.name, "Query Package:", packages.sort! { |x, y| x.name <=> y.name } )
         if( not package.nil? )
-            @relyze.message_dialog( self.name, "Package '%s' has a similarity of %2.2f%%." % [ package.name, package.query( cm, nil, strict ) * 100.0 ], [ :Ok ] )
+            @relyze.message_dialog( self.name, "Package '%s' has a similarity of %2.2f%%." % [ package.name, package.query( cm, nil ) * 100.0 ], [ :Ok ] )
         end
     end
 
